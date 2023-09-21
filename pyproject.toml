@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "hw-web6"
+version = "0.1.0"
+description = "connect_to_sql"
+authors = ["Denko <officedenko@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+faker = "^19.6.2"
+psycopg2 = "^2.9.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
