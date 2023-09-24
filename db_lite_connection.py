@@ -6,8 +6,7 @@ from contextlib import contextmanager
 def connection():
     conn = None
     try:
-        conn = connect(host='cornelius.db.elephantsql.com', user='fopwhyax',
-                       database='fopwhyax', password='A7tLGSCso6pdYIfwtB423s9ZHflD2MLg')
+        conn = connect(host='hw_web6.db')
         yield conn
         conn.commit()
     except Error as err:
