@@ -1,4 +1,4 @@
-from psycopg2 import connect, Error
+import sqlite3, errno
 from contextlib import contextmanager
 
 
@@ -6,10 +6,10 @@ from contextlib import contextmanager
 def connection():
     conn = None
     try:
-        conn = connect(host='hw_web6.db')
+        conn = sqlite3.connect('hw_web6.db')
         yield conn
         conn.commit()
-    except Error as err:
+    except errno as err:
         print(err)
         conn.rollback()
     finally:
